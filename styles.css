@@ -1,4 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
 body {
     font-family: 'Reality Hyper', sans-serif;
     font-size: 30px;
+}
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+}
+.hero img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    object-fit: cover;
+    mix-blend-mode: lighten;
+}
+.hero video{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
