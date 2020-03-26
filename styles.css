@@ -4,10 +4,75 @@
 
 }
 body {
+    
     font-family: 'Reality Hyper', sans-serif;
     font-size: 30px;
 }
+section{
+    height: 100vh;
+}
 
+nav {
+    width: 100vw;
+   
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+a {
+ font-family: 'Nunito Sans', sans-serif;
+    font-size: 22px;
+    z-index: 1;
+}
+li {
+    position: relative;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+}
+li:before {
+    content: "";
+    position: absolute;
+    height: 33.33%;
+    width: 0;
+    background-color: #0D7cff;
+    right: 0;
+    z-index: 0;
+    top: 33.33%;
+    transition: all 0.5s;
+}
+li:after {
+    content: "";
+    position: absolute;
+    height: 33.33%;
+    width: 0;
+    background-color: #0D7cff;
+   left: 0;
+    z-index: 0;
+   bottom: 0;
+   transition: all 0.5s;
+}
+
+.nav a:before {
+    position: absolute;
+    content: "";
+    height: 33.33%;
+    width: 0;
+    background-color: #0D7cff;
+    bottom: 66.66%;
+    left: 0;
+    transition: all 0.5s;
+
+}
+li:hover:before,
+li:hover:after,
+li:hover a:before{
+    width:100%
+}
 .hero {
     min-height: 100vh;
     position: relative;
@@ -30,3 +95,4 @@ body {
     width: 100%;
     object-fit: cover;
 }
+
