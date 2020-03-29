@@ -84,9 +84,13 @@ video {
 }
 
 footer p {
-    text-align: center;
+    display:grid;
     margin-bottom: 2rem;
     font-size: small;
+    display:grid;
+    grid-template-columns:2fr 35px 40px 40px ;
+    align-items: left;
+    margin-left: 0em;
 }
 
 body::-webkit-scrollbar {
