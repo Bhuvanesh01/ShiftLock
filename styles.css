@@ -5,8 +5,8 @@ box-sizing: border-box;
 }
 
 body{
-    background: #000;
-    min-height: 200vh;
+   min-height: 200vh; 
+   background-color: brown;
 }
 
 body::-webkit-scrollbar{
@@ -35,7 +35,6 @@ ul{
 
 /* ------Navigation------ */
 .nav-menu{
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -44,14 +43,14 @@ ul{
     justify-content: space-between;
     align-items: center;
     transition: 0.6s;
-    padding: 30px 50px;
+    padding: 20px 40px;
     z-index: 100000;
 }
 header .nav-menu .logo a
 { 
     position: relative;
     font-family: 'Reality Hyper', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     color:#fff; 
     font-size: 2em;
     display: block;
@@ -98,6 +97,14 @@ header .nav-menu .logo a
     --fa-primary-color: #50C7C7 ;
     --fa-secondary-color: #2F5870 ;
 }
+
+@media only screen and(max-width:750px){
+.nav-menu ul { 
+    flex-direction: column;
+    }
+}
+/* --x-----Navigation-----x-- */
+
 .banner{
     position: relative;
     width: 100%;
@@ -106,4 +113,3 @@ header .nav-menu .logo a
     background-size: cover;
 }
 
-/* --x-----Navigation-----x-- */
