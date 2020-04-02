@@ -103,4 +103,4 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
     border-radius: 12px;
-    background-image: linear-gradient(to bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    background-color:  rgb(242, 198, 77);

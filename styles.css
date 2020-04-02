@@ -22,14 +22,30 @@ body {
     background-color:rgb(13, 16, 28);;
    
 }
-/*--------Main Content ---------*/
+
+     /*-----scrollbar-----*/
+
+body::-webkit-scrollbar {
+    width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    background-color:  rgb(242, 198, 77);
+}
+     /*--x---scrollbar---x--*/
+
+    /*--------Main Content ---------*/
 
 main .site-title {
     height: 100vh;
     width: 100%;
     background-image: url(./Assets/images/sports-car.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
 }
@@ -82,7 +98,7 @@ main .site-title .content{
       top: 12%;
     }
     
-  /**************SVG****************/
+  /*---------SVG-----------*/
   
   path.one {
       transition: 0.4s;
@@ -134,7 +150,7 @@ header {
 }
 
 .logo {
-    color: rgb(242, 198, 77);;
+    color: rgb(242, 198, 77);
     font-family: "reality Hyper", sans-serif;
     font-size: 2rem;
     text-decoration: none;
@@ -145,7 +161,7 @@ header {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #f5f5f5;
+    background-color: rgb(13, 16, 28);
     padding: 2em 0;
     transform: scale(1, 0);
     transform-origin: top;
@@ -155,7 +171,7 @@ header {
 a.navbar-link,
 a.navbar-link:link,
 a.navbar-link:visited {
-    color: rgb(242, 198, 77);;
+    color: rgb(242, 198, 77);
     text-decoration: none;
     padding: 1em;
     font-size: 1.2rem;
@@ -188,6 +204,9 @@ a.navbar-link:active {
     transition: opacity 0.25s ease-in-out 0.25s;
 }
 
+.fas {
+    color:rgb(242, 198, 77) ;
+}
 .navbar-toggle-label {
     position: absolute;
     top: 0;
@@ -204,7 +223,7 @@ a.navbar-link:active {
 
 .navbar-toggle-label:hover,
 .navbar-toggle-label:focus {
-    color: rgb(242, 198, 77);;
+    color:rgb(255, 36, 36);
 }
 
 /* DESKTOP */
@@ -249,7 +268,7 @@ footer {
     width: 100%;
     padding: 0.8em 2em;
     background-color: rgb(13, 16, 28);
-    color: rgb(242, 198, 77);;
+    color: rgb(242, 198, 77);
       display: flex;
       flex-wrap: nowrap;
       flex-direction: row;
