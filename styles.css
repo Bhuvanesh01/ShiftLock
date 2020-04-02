@@ -39,12 +39,6 @@ main .site-title .content{
     text-align: center;
     color:rgb(242, 198, 77);
 }
-
-.wrapper {
-    display: flex;
-    justify-content: center;
-  }
-  
   .cta {
       display: flex;
       padding: 10px 45px;
@@ -52,7 +46,7 @@ main .site-title .content{
       font-family: 'Poppins', sans-serif;
       font-size: 40px;
       color: white;
-      background: #6225E6;
+      background: rgb(13, 16, 28);
       transition: 1s;
       box-shadow: 6px 6px 0 black;
       transform: skewX(-15deg);
