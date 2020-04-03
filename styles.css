@@ -185,7 +185,7 @@ a.navbar-link:visited {
 a.navbar-link:hover,
 a.navbar-link:focus,
 a.navbar-link:active {
-    color:rgb(255, 36, 36);
+    color:#fff;
 }
 
 
@@ -223,7 +223,7 @@ a.navbar-link:active {
 
 .navbar-toggle-label:hover,
 .navbar-toggle-label:focus {
-    color:rgb(255, 36, 36);
+    color:#fff;
 }
 
 /* DESKTOP */
@@ -256,33 +256,24 @@ a.navbar-link:active {
     a.navbar-link:hover,
     a.navbar-link:focus,
     a.navbar-link:active {
-        color:rgb(255, 36, 36);
-        border-top: 3px solid rgb(255, 36, 36);
+        color:#FFF;
+        border-top: 3px solid #fff;
     }
 }  
 
 /*---x----Navigation-----x---*/
 /*----------footer----------*/
-
 footer {
-    width: 100%;
-    padding: 0.8em 2em;
-    background-color: rgb(13, 16, 28);
-    color: rgb(242, 198, 77);
-      display: flex;
-      flex-wrap: nowrap;
-      flex-direction: row;
-      align-items: center;
-      justify-content: flex-end;
-      
-      .copyright,
-      .credit {
-          font-size: 0.75rem;
-      }
-      .credit {
-          font-style: italic;
-      }
-  }
+    display: grid;
+    grid-row-end: -1;
+    text-align: center;
+    align-content: end;
+    justify-items: center;
+    color: rgb(97, 96, 96);
+    background-color: #000;
+    height: 100px;
+    font-family: 'Comfortaa', cursive;
+    font-size: 25px;
+}
 
-  /*------x---footer---x------*/
-  
+/*--x-----footer------x--*/
