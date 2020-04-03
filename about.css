@@ -1,0 +1,244 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #262626
+}
+
+header li {
+    display: inline-block;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    justify-items: end;
+    min-height: 8vh;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    justify-content: end;
+    color: white;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+.logo h1 {
+    color: red;
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 500px;
+    background: #000;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
+}
+
+.box2 {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 500px;
+    background: #000;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
+}
+
+.imgbox {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    z-index: 2;
+    background: #000;
+}
+
+.imgbox:hover {
+    transform: translateY(-100px);
+}
+
+.imgbox img {
+    transition: 0.5s;
+}
+
+.box:hover .imgbox img {
+    opacity: 0.6;
+}
+
+.social {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.social2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+
+ul {
+    list-style: none;
+}
+
+.social li a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background: #fff;
+    color: #262626;
+    margin: 0 10px;
+    border-radius: 50%;
+    transition: 0.5s;
+    transform: translateY(200px);
+    opacity: 0;
+}
+
+.box:hover .social li a {
+    transform: translate(0px);
+    opacity: 1;
+}
+
+.box .social li a .fa {
+    transition: 0.8s;
+    font-size: 24px;
+    line-height: 50px;
+}
+
+.box .social li a:hover .fa {
+    transform: rotateY(360deg)
+}
+
+.box:hover .social li:nth-child(1) a {
+    transition-delay: 0.2s;
+}
+
+.box:hover .social li:nth-child(2) a {
+    transition-delay: 0.4s;
+}
+
+.box:hover .social li:nth-child(3) a {
+    transition-delay: 0.6s;
+}
+
+.box:hover .social li:nth-child(4) a {
+    transition-delay: 0.8s;
+}
+
+/* For second box */
+
+.social2 li a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background: #fff;
+    color: #262626;
+    margin: 0 10px;
+    border-radius: 50%;
+    transition: 0.5s;
+    transform: translateY(300px);
+    opacity: 0;
+}
+
+.box2:hover .social2 li a {
+    transform: translate(0px);
+    opacity: 1;
+}
+
+.box2 .social2 li a .fa {
+    transition: 0.8s;
+    font-size: 24px;
+    line-height: 50px;
+}
+
+.box2 .social2 li a:hover .fa {
+    transform: rotateY(360deg)
+}
+
+.box2:hover .social2 li:nth-child(1) a {
+    transition-delay: 0.2s;
+}
+
+.box2:hover .social2 li:nth-child(2) a {
+    transition-delay: 0.4s;
+}
+
+.box2:hover .social2 li:nth-child(3) a {
+    transition-delay: 0.6s;
+}
+
+.box2:hover .social2 li:nth-child(4) a {
+    transition-delay: 0.8s;
+}
+
+.details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    z-index: 4;
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.details h2 {
+    margin: 10px 00;
+    text-align: center;
+}
+
+.details h2 span {
+    color: #bbb;
+    font-size: 16px;
+}
+
+header h1 {
+    color: white;
+    font-family: 'Reality Hyper', sans-serif;
+    margin-left: 2rem;
+    letter-spacing: 1px;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+footer{
+    color:white;
+    background-color: #000;
+    display:grid;
+    align-items: flex-end;
+}
