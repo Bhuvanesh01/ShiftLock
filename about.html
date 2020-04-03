@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
     <title>About</title>
     <link rel="stylesheet" type="text/css" href="about.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="//db.onlinewebfonts.com/c/b1147ab96e1d01c3bffc0919c55cf703?family=Reality+Hyper" rel="stylesheet"
         type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Comfortaa|Orbitron|Ubuntu&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa|Orbitron|Poppins|Ubuntu&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header><nav><div class="logo">
-        <h1>SHIFTLOCK</h1>
-        </div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li>Cars</li>
-                <li>Bikes</li>
-                <li>About</li>
-            </ul>
+    <header>
+        <h1><a class="logo" href="index.html">SHIFT LOCK</a></h1>
+        
+        <!-- TOGGLE BUTTON FUNCTIONALITY: needs to be placed BEFORE navigation! -->
+        
+        
+        <nav class="navbar" role="navigation">
+           <a class="navbar-link is-active" href="index.html">Home &emsp;</a>
+           <a class="navbar-link" href="#">Cars &emsp;</a>
+           <a class="navbar-link" href="#">Bikes &emsp;</a>
+           <a class="navbar-link" href="about.html">About &emsp;</a>
+           <a class="navbar-link" href="#">Contact</a>
         </nav>
-        </div>
-    </header>
+
+        <!-- ACTUAL VISIBLE TOGGLE BUTTON -->
+        <label for="navbar-toggle" class="navbar-toggle-label">
+           <span><i class="fas fa-bars"></i></span>
+        </label>
+       </header>
     <div class="container">
         <div class="box">
             <div class="imgbox">
