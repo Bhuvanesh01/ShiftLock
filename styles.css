@@ -1,279 +1,187 @@
-/* BASIC */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-html,
-body,
-main {
-    height: 100%;
-    width: 100%;
-}
-
-body {
-    margin: 0;
+*{
     padding: 0;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 0.02rem;
-    line-height: 1.8;
-    background-color:rgb(13, 16, 28);;
-   
-}
-
-     /*-----scrollbar-----*/
-
+    margin: 0;
+      list-style: none;
+    text-decoration: none;
+  }
+  body{
+    font-family: 'poppins', sans-serif;
+  }
+ 
 body::-webkit-scrollbar {
-    width: 6px;
+  width: 6px;
 }
 
 body::-webkit-scrollbar-track {
-    background: transparent;
+  background: transparent;
 }
 
 body::-webkit-scrollbar-thumb {
-    border-radius: 12px;
-    background-color:  rgb(242, 198, 77);
-}
-     /*--x---scrollbar---x--*/
-
-    /*--------Main Content ---------*/
-
-main .site-title {
-    height: 100vh;
-    width: 100%;
-    background-image: url(./Assets/images/sports-car.jpg);
-    background-size: cover;
-    display: flex;
-    justify-content: center;
+  border-radius: 12px;
+  background-color:  rgb(242, 198, 77);
 }
 
-main .site-title .content{
-    padding:20rem;
-    text-align: center;
-    color:rgb(242, 198, 77);
-}
-  .cta {
-      display: flex;
-      padding: 10px 45px;
-      text-decoration: none;
-      font-family: 'Poppins', sans-serif;
-      font-size: 40px;
-      color: white;
-      background: rgb(13, 16, 28);
-      transition: 1s;
-      box-shadow: 6px 6px 0 black;
-      transform: skewX(-15deg);
-  }
-  
-  .cta:focus {
-     outline: none; 
-  }
-  
-  .cta:hover {
-      transition: 0.5s;
-      box-shadow: 10px 10px 0 #FBC638;
-  }
-  
-  .cta span:nth-child(2) {
-      transition: 0.5s;
-      margin-right: 0px;
-  }
-  
-  .cta:hover  span:nth-child(2) {
-      transition: 0.5s;
-      margin-right: 45px;
-  }
-  
-    span {
-      transform: skewX(15deg) 
-    }
-  
-    span:nth-child(2) {
-      width: 20px;
-      margin-left: 30px;
-      position: relative;
-      top: 12%;
-    }
-    
-  /*---------SVG-----------*/
-  
-  path.one {
-      transition: 0.4s;
-      transform: translateX(-60%);
-  }
-  
-  path.two {
-      transition: 0.5s;
-      transform: translateX(-30%);
-  }
-  
-  .cta:hover path.three {
-      animation: color_anim 1s infinite 0.2s;
-  }
-  
-  .cta:hover path.one {
-      transform: translateX(0%);
-      animation: color_anim 1s infinite 0.6s;
-  }
-  
-  .cta:hover path.two {
-      transform: translateX(0%);
-      animation: color_anim 1s infinite 0.4s;
-  }
-  
-  /* SVG animations */
-  
-  @keyframes color_anim {
-      0% {
-          fill: white;
-      }
-      50% {
-          fill: #FBC638;
-      }
-      100% {
-          fill: white;
-      }
-  }
-/*---x----Main Content -----x---*/
-
-/*-------Navigation-------- */
-
-header {
-    position: fixed;
-    width: 100%;
-    padding: 1em 2em;
-    background-color: rgb(13, 16, 28);
-    z-index: 1000;
-}
-
-.logo {
-    color: rgb(242, 198, 77);
-    font-family: "reality Hyper", sans-serif;
-    font-size: 2rem;
-    text-decoration: none;
-}
-
-.navbar {
-    width: 100%;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: rgb(13, 16, 28);
-    padding: 2em 0;
-    transform: scale(1, 0);
-    transform-origin: top;
-    transition: transform 0.3s ease-in-out;
-}
-
-a.navbar-link,
-a.navbar-link:link,
-a.navbar-link:visited {
-    color: rgb(242, 198, 77);
-    text-decoration: none;
-    padding: 1em;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    display: block;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.15s ease-in-out, color 0.3s ease-in-out;
-}
-
-a.navbar-link:hover,
-a.navbar-link:focus,
-a.navbar-link:active {
-    color:#fff;
-}
-
-
-/* ~ looks for any proceeding sibling with class navbar after navbar-toggle */
-
-.navbar-toggle {
-    display: none;
-}
-
-.navbar-toggle:checked~.navbar {
-    transform: scale(1, 1);
-}
-
-.navbar-toggle:checked~.navbar a.navbar-link {
-    opacity: 1;
-    transition: opacity 0.25s ease-in-out 0.25s;
-}
-
-.fas {
-    color:rgb(242, 198, 77) ;
-}
-.navbar-toggle-label {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-right: 2em;
-    height: 100%;
-    font-size: 1.4rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: color 0.3s ease-in-out;
-}
-
-.navbar-toggle-label:hover,
-.navbar-toggle-label:focus {
-    color:#fff;
-}
-
-/* DESKTOP */
-
-@media screen and (min-width: 800px) {
-    header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 2em;
-    }
-    .navbar {
-        all: unset;
-        margin-top: 1em;
-        margin-bottom: 1em;
-    }
-    .navbar-toggle-label {
-        display: none;
-    }
-    a.navbar-link,
-    a.navbar-link:link,
-    a.navbar-link:visited {
-        opacity: 1;
-        display: inline;
-        text-align: left;
-        border-top: 3px solid transparent;
-        transition: all 0.2s ease-in-out;
-    }
-    a.navbar-link:hover,
-    a.navbar-link:focus,
-    a.navbar-link:active {
-        color:#FFF;
-        border-top: 3px solid #fff;
-    }
-}  
-
-/*---x----Navigation-----x---*/
-/*----------footer----------*/
-footer {
-    display: grid;
-    grid-row-end: -1;
-    text-align: center;
-    align-content: end;
-    justify-items: center;
-    color: rgb(97, 96, 96);
-    background-color: #000;
+  /* navigation*/
+  nav{
     height: 100px;
-    font-family: 'Comfortaa', cursive;
-    font-size: 25px;
+      background: rgb(13, 16, 28);
+  }
+  nav img{
+      position: absolute;
+      width: 90px;
+      left: 5%;
+  }
+  nav ul{
+    float: right;
+    margin-right: 25px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px;
+  }
+  nav ul li a{
+    position: relative;
+    padding: 5px 0;
+    color: rgb(242, 198, 77);
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  nav ul li a:before{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+      background: rgb(242, 198, 77);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear;
+  }
+  nav ul li a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  label #btn,
+  label #cancel{
+    font-size: 30px;
+    color: rgb(242, 198, 77);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+  @media (max-width: 1118px){
+    nav img{
+      left: 8%;
+    }
+  }
+  @media (max-width: 944px){
+    nav img{
+      width: 75px;
+          top: 20px;
+          left: 6%;
+    }
+      nav ul li a{
+          font-size: 17px;
+      }
+  }
+  @media (max-width: 860px){
+    label #btn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: rgb(13, 16, 28);
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    #check:checked ~ ul{
+      left: 0;
+      z-index: 10000;
+    }
+      #check:checked ~ label #btn{
+      display: none;
+    }
+      #check:checked ~ label #cancel{
+      display: block;
+    }
+  }
+  /*--x--navigation--x--*/
+.banner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url(./Assets/images/sports-car.jpg);
+  background-size: cover;
 }
 
-/*--x-----footer------x--*/
+.btn {
+  position: relative;
+  display: inline-block;
+  width: 277px;
+  height: 50px;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration:none;
+  font-family: 'Roboto', sans-serif;
+  font-weight:900;
+  font-size:17px;
+  letter-spacing: 0.045em;
+}
+
+.btn svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.btn svg rect {
+  //stroke: #EC0033;
+  stroke-width: 4;
+  stroke-dasharray: 353, 0;
+  stroke-dashoffset: 0;
+  -webkit-transition: all 600ms ease;
+  transition: all 600ms ease;
+}
+
+.btn span{
+background: rgb(255,130,130);
+background: -moz-linear-gradient(left,  rgba(255,130,130,1) 0%, rgba(225,120,237,1) 100%);
+background: -webkit-linear-gradient(left,  rgba(255,130,130,1) 0%,rgba(225,120,237,1) 100%);
+background: linear-gradient(to right,  rgba(255,130,130,1) 0%,rgba(225,120,237,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8282', endColorstr='#e178ed',GradientType=1 );
+
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.btn:hover svg rect {
+  stroke-width: 4;
+  stroke-dasharray: 196, 543;
+  stroke-dashoffset: 437;
+}
