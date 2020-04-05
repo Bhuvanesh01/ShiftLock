@@ -21,17 +21,19 @@ body::-webkit-scrollbar-thumb {
 
 /* --------------------nav bar -----------------*/
 
-.navbar {
+.nav-bar, .navbox {
     position: absolute;
-    top: 3%;
-    right: 5%;
+    top: 0%;
+    right: 9%;
+    height: 5vh;
     display: flex;
-    justify-content: flex-start;
-    background-color: rgb(13, 16, 28);
-    color:white;
+    color: white;
     align-items: center;
     justify-items: flex-end;
-    font-family: 'poppins', cursive;
+    font-family: 'Exo 2', sans-serif;
+    letter-spacing: 3px;
+    transition: 0.5s;
+    padding-left: 1em;
 }
 
 header h1 {
@@ -39,6 +41,7 @@ header h1 {
     font-family: 'Reality Hyper', sans-serif;
     margin-left: 2rem;
     letter-spacing: 2px;
+    font-weight: 100;
     font-size: 30px;
     cursor: pointer;
 }
@@ -52,6 +55,89 @@ header {
 header li {
     display: inline-block;
     padding: 20px;
+}
+
+.nav-bar li:hover {
+    transition: 0.5s;
+    color: greenyellow;
+    border-bottom: 2px greenyellow solid;
+    padding: 1em 1.52em;
+    border-radius: 4px;
+    min-width: fit-content;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+}
+.hide{
+    display:none;
+}
+.burger {
+    margin-top: 2rem;
+    display: none;
+}
+.burger:hover{
+    background-color: yellowgreen;
+}
+
+
+@media screen and (max-width:800px) {
+    body {
+        overflow-x: hidden;
+    }
+    .hide{
+        display:block;
+    }
+    .nav-bar {
+        position: absolute;
+        top: 4rem;
+        height: 70vh;
+        background-color: rgb(13, 16, 28);
+        border-radius:6px;
+        z-index: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        width: 500%;
+        transform: translateX(130%);
+        transition: transform 0.5s ease-in;
+        padding: 1em 1.52em;
+    }
+    .nav-bar a {
+        display: block;
+        text-decoration: none;
+        transform-origin: 0 0;
+        transition: transform var(--duration) var(--easing), color var(--duration) var(--easing);
+        transition-delay: var(--delay-out);
+        border-radius: 4px;
+        padding: 1em 1.52em;
+    }
+
+    header h1 {
+        z-index: 2;
+        --duration: 0.5s;
+        --easing: ease-in-out;
+        position: relative;
+    }
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+  
+    .nav-active{
+        transform: translateX(30%);
+    }
+@keyframes navLinkFade {
+    from{
+        opacity:0;
+        transform:translateX(50px);
+    }
+}
+
+   
 }
 
 /*--------------- Image Box-------------------*/
