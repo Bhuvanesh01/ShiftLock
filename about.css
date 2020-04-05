@@ -1,49 +1,65 @@
 body {
     margin: 0;
     padding: 0;
-    background: #262626
+    background-image: url(Assets/images/aboutbg.jpg);
 }
 
-nav {
+/*-----------Scroll Bar ----------*/
+
+body::-webkit-scrollbar {
+    width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    background-color: rgb(242, 198, 77);
+}
+
+/* --------------------nav bar -----------------*/
+
+.navbar {
+    position: absolute;
+    top: 3%;
+    right: 5%;
     display: flex;
     justify-content: flex-start;
+    background-color: rgb(13, 16, 28);
+    color:white;
     align-items: center;
-    justify-items: end;
-    min-height: 8vh;
+    justify-items: flex-end;
+    font-family: 'poppins', cursive;
 }
 
-nav ul {
+header h1 {
+    color: greenyellow;
+    font-family: 'Reality Hyper', sans-serif;
+    margin-left: 2rem;
+    letter-spacing: 2px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+header {
     display: grid;
-    grid-template-columns: 2fr 2fr 2fr 2fr;
-    justify-content: end;
-    color: white;
+    grid-template-rows: 5rem;
+    background-color: rgb(13, 16, 28);
 }
 
-nav ul a {
-    text-decoration: none;
+header li {
+    display: inline-block;
+    padding: 20px;
 }
 
-.logo h1 {
-    color: red;
-}
+/*--------------- Image Box-------------------*/
 
 .box {
     position: absolute;
     top: 50%;
     left: 30%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    height: 500px;
-    background: #000;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
-}
-
-.box2 {
-    position: absolute;
-    top: 50%;
-    left: 70%;
     transform: translate(-50%, -50%);
     width: 400px;
     height: 500px;
@@ -136,7 +152,20 @@ ul {
     transition-delay: 0.8s;
 }
 
-/* For second box */
+/* -------------For second box---------------- */
+
+.box2 {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 500px;
+    background: #000;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
+}
 
 .social2 {
     position: absolute;
@@ -210,39 +239,25 @@ ul {
 .details h2 {
     margin: 10px 00;
     text-align: center;
+    font-family: 'Comfortaa', cursive;
 }
 
 .details h2 span {
-    color: #bbb;
+    color: rgb(112, 107, 107);
     font-size: 16px;
 }
 
-/* --------------Header and Footer -------------*/
-
-header h1 {
-    color: white;
-    font-family: 'Reality Hyper', sans-serif;
-    margin-left: 2rem;
-    letter-spacing: 1px;
-    font-size: 50px;
-    cursor: pointer;
-}
-
-header li {
-    display: inline-block;
-    padding: 20px;
-}
+/* --------------Footer -------------*/
 
 footer {
     display: grid;
     grid-row-end: -1;
-    text-align: center;
     align-content: end;
     justify-items: center;
     color: rgb(97, 96, 96);
     background-color: #000;
     height: 100px;
-    margin-top: 33rem;
+    margin-top: 36rem;
     font-family: 'Comfortaa', cursive;
     font-size: 25px;
 }
@@ -255,6 +270,6 @@ a {
 }
 
 a:visited {
-    color: white;
+    color: inherit;
     text-decoration: none;
 }
