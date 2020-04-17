@@ -185,3 +185,43 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8282', end
   stroke-dasharray: 196, 543;
   stroke-dashoffset: 437;
 }
+
+/* Blog post */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: fr;
+  grid-gap: 20px;
+  padding: 10px 10px;
+}
+.card {
+  border: 1px solid #d3d3d3;
+  border-radius: .25rem;
+  box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+}
+.bg-img {
+  background-size: cover;
+  min-height: 120px;
+  background-position: center;
+  background-color: # rgb(13, 16, 28);
+}
+
+.bg-img img {
+  width: 100%;
+}
+.content {
+  padding: 15px;
+}
+.content > p
+{
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "poppins",sans-serif;
+}
+.button {
+  background-color: transparent;
+  border: 1px solid #2196F3;
+  padding: .5rem 1rem;
+  cursor: pointer;
+  border-radius: .25rem;
+}
