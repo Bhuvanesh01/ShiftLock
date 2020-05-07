@@ -189,24 +189,29 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8282', end
 /* Blog post */
 .grid-container {
   display: grid;
+  max-width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-template-rows: fr;
+  grid-template-rows:  1fr;
   grid-gap: 20px;
   padding: 10px 10px;
 }
 .card {
   border: 1px solid #d3d3d3;
-  border-radius: .25rem;
+  border-radius: .55rem;
   box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+  transform: scale(.9) translateZ(0);
+}
+.card:hover{
+  transform: scale(1.0) translateZ(0);
 }
 .bg-img {
   background-size: cover;
-  min-height: 120px;
   background-position: center;
   background-color: # rgb(13, 16, 28);
 }
 
 .bg-img img {
+  border-radius: .55rem;
   width: 100%;
 }
 .content {
@@ -214,9 +219,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8282', end
 }
 .content > p
 {
+  padding: 10px;
   font-size: 15px;
   font-weight: 400;
   font-family: "poppins",sans-serif;
+}
+.card-action{
+  position:relative;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 .button {
   background-color: transparent;
