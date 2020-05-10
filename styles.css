@@ -192,10 +192,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8282', end
   max-width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows:  1fr;
-  grid-gap: 20px;
+  grid-gap: 10px;
   padding: 10px 10px;
 }
 .card {
+  width: 350px;
+  height: 500px;
   border: 1px solid #d3d3d3;
   border-radius: .55rem;
   box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
@@ -216,6 +218,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8282', end
 }
 .content {
   padding: 15px;
+  width: 80%;
+  height: 80%;
 }
 .content > p
 {
@@ -225,14 +229,85 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8282', end
   font-family: "poppins",sans-serif;
 }
 .card-action{
-  position:relative;
-  padding-top: 20px;
-  padding-bottom: 10px;
+  width: 100%;
+  display: flex; 
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 15px;
 }
+
 .button {
   background-color: transparent;
   border: 1px solid #2196F3;
   padding: .5rem 1rem;
-  cursor: pointer;
+  cursor: pointer; 
   border-radius: .25rem;
 }
+@media (max-width: 1118px){
+  .grid-container {
+     grid-gap: 5px;
+   }
+   .card {
+     width: 350px;
+     height: 500px;
+    transform: scale(.8) translateZ(0);
+   }
+   .card:hover{
+     transform: scale(0.95) translateZ(0);
+   }
+ }
+
+@media (max-width: 860px){
+ .grid-container {
+    grid-gap: 5px;
+  }
+  .card {
+    width: 340px;
+    height: 500px;
+   transform: scale(.85) translateZ(0);
+  }
+  .card:hover{
+    transform: scale(0.95) translateZ(0);
+  }
+}
+/*--x---Blog post---x--*/
+/* Footer */
+.footer
+{
+  background: #162c3b;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer ul li {
+  list-style: none;
+}
+.text {
+  color: #adff2f;
+}
+.fa-facebook {
+  padding-left: 10px;
+  color:#adff2f
+}
+@media (max-width: 944px){
+  .footer
+  {
+    padding: 20px 40px;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .footer ul{
+    margin-bottom: 20px;
+  }
+ 
+}
+
+/*--x--Footer--x--*/
+ 
