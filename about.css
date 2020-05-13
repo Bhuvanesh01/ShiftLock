@@ -1,7 +1,9 @@
 body {
+    background-color:black;
     margin: 0;
     padding: 0;
     background-image: url(Assets/images/aboutbg.jpg);
+    background-repeat: repeat-x;
 }
 
 /*-----------Scroll Bar ----------*/
@@ -46,9 +48,15 @@ header h1 {
     cursor: pointer;
 }
 
+header h1 img{
+    position: absolute;
+    width: 75px;
+    left: 2%;
+}
+
 header {
     display: grid;
-    grid-template-rows: 5rem;
+    grid-template-rows: 6rem;
     background-color: rgb(13, 16, 28);
 }
 
