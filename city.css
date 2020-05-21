@@ -1,0 +1,10 @@
+body {
+    background-color: rgb(13, 16, 28);
+    background-image: url(/Assets/images/citycover.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.badge {
+    color: rgb(251, 255, 5);
+    font-size: 30px;
+}
