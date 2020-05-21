@@ -3,7 +3,20 @@ h1 img {
     width: 75px;
 }
 
+/*-----------Scroll Bar ----------*/
 
+body::-webkit-scrollbar {
+    width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    background-color: rgb(242, 198, 77);
+}
 
 body {
     background-color: rgb(13, 16, 28);
